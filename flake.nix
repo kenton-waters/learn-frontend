@@ -16,6 +16,13 @@
       devShells.${system}.default = pkgs.mkShellNoCC {
         buildInputs = with pkgs; [
           google-chrome
+
+          (vscode-with-extensions.override {
+            vscodeExtensions = with vscode-extensions; [
+              jnoortheen.nix-ide
+              esbenp.prettier-vscode
+            ];
+          })
         ];
 
         shellHook = ''
