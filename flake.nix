@@ -21,6 +21,7 @@
             vscodeExtensions = with vscode-extensions; [
               jnoortheen.nix-ide
               esbenp.prettier-vscode
+              ritwickdey.liveserver
             ];
           })
         ];
